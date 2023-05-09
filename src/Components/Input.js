@@ -59,7 +59,9 @@ function Input() {
   return (
     <div className="popup">
       <h3>Phone Verification</h3>
-      <p>Enter the 6 digit OTP sent to your phone number:</p>
+      <p style={{
+        fontFamily:"cursive"
+      }}>Enter the 6 digit OTP sent to your phone number</p>
       <div className="otp-input-container">
         {otp.map((digit, index) => (
           <input
@@ -80,12 +82,24 @@ function Input() {
                 borderBottom:"1px solid black",
                 marginLeft:"5px",
                 width:"20px",
-                boxShadow:"0px 8px 2px rgba(0   0   0   0.6)"
+                fontFamily:"cursive"
             }}
           />
         ))}
       </div>
-      <button className="verify-btn" onClick={handleVerifyClick}>Verify</button>
+      <button className="verify-btn"
+      
+      onClick={handleVerifyClick}
+      style={{
+        background:"blue",
+        color:"white",
+        width:"100px",
+        height:"50px",
+        margin:"20px",
+        borderRadius:"10%",
+        fontSize:"18px"
+      }}
+      >Verify</button>
     </div>
   );
 }
